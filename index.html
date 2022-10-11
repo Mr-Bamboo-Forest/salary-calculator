@@ -1,0 +1,103 @@
+<head>
+<style>
+    body{
+        background: #2b2b2b;
+    }
+div{
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+    border-style: solid;
+    width: 350px;
+    height: 230px;
+    border-color: grey;
+    border-width: 3px;
+}
+input:focus {
+    color: lightgrey;
+    background-color: #2b2b2b;
+    border-style: solid;
+    text-align: center;
+    margin: auto;
+    align-self: center;
+    border-width: 3px;
+    outline: 0px;
+    border-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    color: lightgrey;
+    background-color: #2b2b2b;
+    border-style: solid;
+    text-align: center;
+    margin: auto;
+    align-self: center;
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-size: large;
+    color: lightgray;
+    text-align: center;
+    margin:auto;
+    vertical-align: middle;
+    align-self: center;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    color: lightgray;
+    text-align: center;
+    margin:auto;
+    vertical-align: middle;
+    align-self: center;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+    <H1>Money Calculator 💸</H1>
+    <br>
+    <div>
+        <h1>yearly salary Calculator</h1>
+        <p>Pay per hour:</p>
+    <input type="text" id="wage"></input>
+    <p>hours worked per week:</p>
+    <input type="text" id="hrsperweek"></input>
+    
+    <p id="finalpay">your yearly wage is: </p>
+    <br>
+    <button onclick="wagecalc()">calculate</button>
+    </div>
+    <br><br><br>
+    <script>
+        function wagecalc(){
+            var final = (document.getElementById("wage").value * document.getElementById("hrsperweek").value * 52);
+            document.getElementById("finalpay").innerText = "you will earn around $" + comma(final) + " for every year of work." + " \n That roughly equates to " + comma(Math.round(final / 6.35)) + " McDonald's 6-piece chicken nuggets.";
+        }
+
+        function comma(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function wagecalcweeks(){
+            var final = (document.getElementById("wage2").value / 52);
+            document.getElementById("finalpay2").innerText = "you will earn around $" + Math.round(final) + " for every week of work." + " \n That roughly equates to " + comma(Math.round(final / 6.35)) + " McDonald's 6-piece chicken nuggets.";
+        }
+    </script>
+
+    <div>
+        <h1>weekly salary Calculator</h1>
+        <p>Pay per year:</p>
+    <input type="text" id="wage2"></input>
+    
+    
+    <p id="finalpay2">your yearly wage is: </p>
+    <br>
+    <button onclick="wagecalcweeks()">calculate</button>
+    </div>
+
+</body>
