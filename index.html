@@ -78,7 +78,7 @@ p{
     <br><br><br>
     <script>
         function wagecalc(){
-            var final = (document.getElementById("wage").value * document.getElementById("hrsperweek").value * 52);
+            var final = (Math.round(document.getElementById("wage").value) * document.getElementById("hrsperweek").value * 52);
             document.getElementById("finalpay").innerText = "you will earn around $" + comma(final) + " for every year of work." + " \n That roughly equates to " + comma(Math.round(final / 6.35)) + " McDonald's 6-piece chicken nuggets.";
         }
 
