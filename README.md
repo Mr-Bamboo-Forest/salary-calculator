@@ -1,2 +1,2 @@
 # salary-calculator
-This exists just as a JS experiment.
+This exists mainly for me to remember some of JavaScript's functionality.
