@@ -95,7 +95,7 @@ p{
 
 function wagecalcweeks(){
             var final = (document.getElementById("wage2").value / 52);
-            document.getElementById("finalpay2").innerText = "you will earn around $" + Math.round(final) + " for every week of work." + " \n That roughly equates to " + comma(Math.round(final / 6.35)) + " McDonald's 6-piece chicken nuggets.";
+            document.getElementById("finalpay2").innerText = "you will earn around $" + Math.round(final) + " for every week of work." + " \n That roughly equates to " + comma(Math.round(final / 1.05 /*IN AUSTRALIAN MONEY*/)) + " McDonald's chicken nuggets.";
         }
     </script>
 <script type="text/javascript">
