@@ -82,7 +82,19 @@ p{
     <br>
     <button onclick="wagecalc()">calculate</button>
     </div>
+
     <br><br><br>
+
+    <div>
+        <h1><strong>weekly</strong> salary Calculator</h1>
+        <p>Pay per year:</p>
+    <input type="text" id="wage2" onchange="saveValue(this);"></input>
+    
+    
+    <p id="finalpay2">your weekly wage is: </p>
+    <br>
+    <button onclick="wagecalcweeks()">calculate</button>
+    </div>
     <script>
         function wagecalc(){
             var final = (Math.round(document.getElementById("wage").value) * document.getElementById("hrsperweek").value * 52);
@@ -119,15 +131,6 @@ function wagecalcweeks(){
         return localStorage.getItem(v);
     }
 </script>
-    <div>
-        <h1><strong>weekly</strong> salary Calculator</h1>
-        <p>Pay per year:</p>
-    <input type="text" id="wage2" onchange="saveValue(this);"></input>
-    
-    
-    <p id="finalpay2">your weekly wage is: </p>
-    <br>
-    <button onclick="wagecalcweeks()">calculate</button>
-    </div>
+
 
 </body>
